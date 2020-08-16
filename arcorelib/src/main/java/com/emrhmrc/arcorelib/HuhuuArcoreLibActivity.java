@@ -202,7 +202,7 @@ public class HuhuuArcoreLibActivity extends BaseActivity {
         // Initialize the VideoRecorder.
         videoRecorder = new VideoRecorder();
         int orientation = getResources().getConfiguration().orientation;
-        videoRecorder.setVideoQuality(CamcorderProfile.QUALITY_1080P, orientation);
+        videoRecorder.setVideoQuality(CamcorderProfile.QUALITY_720P, orientation);
         videoRecorder.setSceneView(arFragment.getArSceneView());
 
         recordButton = findViewById(R.id.record);
