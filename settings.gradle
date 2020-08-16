@@ -1,0 +1,3 @@
+include ':arcorelib'
+include ':app'
+rootProject.name = "ArcoreVideo"
