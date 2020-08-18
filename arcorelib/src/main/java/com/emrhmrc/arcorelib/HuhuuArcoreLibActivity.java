@@ -114,7 +114,7 @@ public class HuhuuArcoreLibActivity extends BaseActivity {
         ExternalTexture texture = new ExternalTexture();
 
         // Create an Android MediaPlayer to capture the video on the external texture's surface.
-        mediaPlayer = MediaPlayer.create(this, R.raw.ch3);
+        mediaPlayer = MediaPlayer.create(this, R.raw.ch1);
         mediaPlayer.setSurface(texture.getSurface());
         mediaPlayer.setLooping(true);
 
@@ -145,6 +145,7 @@ public class HuhuuArcoreLibActivity extends BaseActivity {
                     if (videoRenderable == null) {
                         return;
                     }
+
                     // Create the Anchor.
                     if (anchorNode == null) {
 
@@ -152,10 +153,6 @@ public class HuhuuArcoreLibActivity extends BaseActivity {
                         anchor = hitResult.createAnchor();
                         anchorNode = new AnchorNode(anchor);
                         //  anchorNode.setParent(arFragment.getArSceneView().getScene());
-                        //Add Model
-
-
-                        //
 
                         // Create a node to render the video and add it to the anchor.
                         //  Node videoNode = new Node();
@@ -202,7 +199,7 @@ public class HuhuuArcoreLibActivity extends BaseActivity {
         // Initialize the VideoRecorder.
         videoRecorder = new VideoRecorder();
         int orientation = getResources().getConfiguration().orientation;
-        videoRecorder.setVideoQuality(CamcorderProfile.QUALITY_720P, orientation);
+        videoRecorder.setVideoQuality(CamcorderProfile.QUALITY_480P, orientation);
         videoRecorder.setSceneView(arFragment.getArSceneView());
 
         recordButton = findViewById(R.id.record);

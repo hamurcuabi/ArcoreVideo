@@ -14,6 +14,9 @@ import com.google.android.material.snackbar.Snackbar;
  * Created by hamurcuabi on 09,August,2020
  **/
 public class BaseActivity extends AppCompatActivity {
+
+    private static final String ApiKey = "681D6B8E-0B98-45C3-AF7C-810AB9850F0C";
+
     public boolean hasWritePermission() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
             return true;
